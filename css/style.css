@@ -82,15 +82,16 @@ main{
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    max-width: 1600px;
 }
 
 .section__principal{
     width: 100%;
     position: relative;
     min-height: 500px;
+    
 }
 .principal__fondo{
-    
     position: absolute;  
     top: 0;
     left: 0;
@@ -128,7 +129,7 @@ main{
     padding: 0.2rem 1rem;
     transition: 450ms all;
 }
-.detalles button:active{
+.detalles button:hover{
     transform: scale(1.1);
 }
 .principal__decoracion{
@@ -148,6 +149,8 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    z-index: 2;
 }
 .section__secundaria > h2{
     color: #4155c8;
@@ -189,9 +192,7 @@ main{
     /* background: linear-gradient(to right,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.3) 100%); */
     font-size: 1rem;
     color:white;
-    text-align: center;
-
-    
+    text-align: center;  
 
 }
 
@@ -202,6 +203,21 @@ footer{
 
 
 @media screen and (min-width: 600px) {
+    .principal__fondo{
+        position: absolute;  
+        top: 0;
+        left: 0;
+    }
+    .principal__fondo img{
+        max-height: 800px;
+    }
+    .detalles{
+        padding-left: 2rem;  
+        padding-top: 2rem;
+        max-width: 80%;      
+    }
+
+
     .contenedor__producto{
         width: 40%;
     }   
@@ -212,4 +228,61 @@ footer{
     .contenedor__producto{
         width: 30%;
     }   
+    .menu--mobile{
+        display: none;
+    }
+    .menu__item--iconos{
+        display: none;
+    }
+    .menu--desplegable{
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        margin-top: 0;
+        background-color: white;
+        box-shadow: none;
+        margin-right: 5rem;
+        display: flex;
+        align-items: center;
+    }
+    .menu--desplegable>li{
+        width: 100%;
+        border-bottom:none;
+        margin-right: 1rem;
+    }
+    
+    .menu--desplegable li a{
+        color: var(--color-menu);
+        font-size: 0.8rem;
+    }
+
+    .menu__productos--desplegable{
+        visibility: visible;
+        list-style: none;
+        position: absolute;
+        opacity: 1;
+        text-align: left;
+        display: none;
+        background-color: white;
+        padding: 0;
+    }
+    .menu__productos--desplegable li{
+        border: 0.1px solid var(--color-menu);
+        padding: 0.2rem;
+    }
+    .menu__productos--desplegable li a{
+        font-size: 0.6rem;
+        color: black;
+    }
+    .menu__item--productos:hover ul, .menu__productos--desplegable:hover{
+        display: block;
+    }
+    .detalles{
+        padding-left: 2rem;  
+        padding-top: 2rem;
+        max-width: 80%;      
+    }
+    .detalles h1{
+        font-size: 2rem;
+    }
 }
