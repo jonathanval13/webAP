@@ -14,6 +14,9 @@ html{
 
 body{
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .header{
     display: flex;
@@ -82,19 +85,22 @@ main{
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    max-width: 1600px;
+    align-content: center;
+    max-width: 1920px;
 }
 
 .section__principal{
     width: 100%;
     position: relative;
-    min-height: 500px;
-    
+    height: calc(100vh - 5rem);
+    max-height: 800px;
+    min-height: 505px;
 }
 .principal__fondo{
     position: absolute;  
     top: 0;
     left: 0;
+
 }
 .principal__fondo img{
     min-height: 498px;
@@ -103,7 +109,8 @@ main{
     width: 100%;
     position: relative;
     background: linear-gradient(to right,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.3) 100%); 
-    min-height: 498px;
+    height: calc(100vh - 5rem);
+    min-height: 510px;
     padding: 1rem 0.5rem 0 1rem;
    
 }
@@ -114,7 +121,8 @@ main{
     gap: 1rem;
     color: white;
     width: 100%;
-    align-items: flex-start;
+    align-content: space-around;
+
 }
 .detalles p{
     font-size: 0.8rem;
@@ -214,7 +222,8 @@ footer{
     .detalles{
         padding-left: 2rem;  
         padding-top: 2rem;
-        max-width: 80%;      
+        max-width: 80%; 
+        align-items: flex-start;     
     }
 
 
@@ -280,7 +289,7 @@ footer{
     .detalles{
         padding-left: 2rem;  
         padding-top: 2rem;
-        max-width: 80%;      
+        max-width: 50%;      
     }
     .detalles h1{
         font-size: 2rem;
